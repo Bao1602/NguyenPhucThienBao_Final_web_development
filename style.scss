@@ -1,0 +1,320 @@
+$primary-color : green;
+$default-heigh-picture: 300px;
+$default-width-picture: 550px;
+$media-phone-width: 30vh;
+$media-tablet-width:60vh;
+
+body {
+    margin: 0;
+    background-color: rgb(243, 233, 233);
+    color: $primary-color;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+        display: flex;
+        gap: 10px;
+        list-style-type: none;
+        padding-right: 20px;
+        font-size: 20px;
+    }
+    h2 {
+        padding-left: 30px;
+        font-size: 40px;
+    }
+}
+
+
+header ul li a {
+    color: $primary-color; 
+    text-decoration: none;
+}
+
+#banner-section {
+   background-image: url("https://cdn.britannica.com/57/144757-131-5BCA8A87.jpg");
+   height: 600px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   padding-left: 30px;
+   margin-bottom: 30px;
+}
+
+#banner-section {
+    h2 {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    background-color: transparent;
+    top: 20%;
+    padding: 16px;
+}
+}
+
+#banner-section h2 {
+    color: white;
+}
+
+
+#banner-section p {
+    position: absolute;
+    top: 40%;
+    max-width: 600px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    section {
+        padding: 20px;
+        border: 1px solid black;
+        img{
+            height: $default-heigh-picture;
+            width: $default-width-picture;
+        }
+        div {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            i {
+                color: $primary-color;
+            }
+            h2 {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+#Best-feature {
+    text-align: center;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    h2{
+    font-size: 40px;
+    }
+    .upper-row{
+        font-size: 20px;
+    }
+    .row{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        div{
+            border: 1px solid gray;
+        }
+        .emoji{
+            font-size: 50px;
+        }
+        h4{
+            font-size: 40px;
+        }
+    }
+}
+
+.contact-us {
+    padding: 20px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        label {
+            font-size: 20px;
+               }
+        input {
+            padding: 10px;
+            background-color: rgb(213, 213, 213);
+            border: none;
+        }
+        button {
+            background-color: red;
+            width: $default-heigh-picture;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin: auto;
+            border: none;
+        }     
+    }
+}
+
+.contact-us form button:hover {
+    background-color: $primary-color;
+    color: white;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 40px;
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #banner-section{
+        display: flex;
+        justify-content: center;
+    }
+
+    header, header ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 15px;
+    }
+
+    header ul li {
+        font-size: 20px;
+    }
+
+    header h2 {
+        font-size: 30px;
+    }
+
+    #banner-section p  {
+       bottom: 0%;
+       top: unset;
+       color: purple;
+    }
+
+    #banner-section {
+        padding-left: 12px;
+    }
+
+    #banner-section h2 {
+        top: 0%;
+        margin: 0;
+    }
+
+    .about-title {
+        font-size: 20px;
+        max-width: 50%;
+        margin: auto;
+    }
+
+    main {
+        section{
+            img{
+                height: 50vh;
+                width: $media-phone-width;
+            }
+        }
+    }
+
+    #Best-feature {
+        text-align: center;
+        box-sizing: border-box;
+        padding-bottom: 30px;
+        padding-top: 40px;
+        h2{
+        font-size: 40px;
+        }
+        .upper-row{
+            font-size: 20px;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: 1fr;
+            div{
+                border: 1px solid gray;
+            }
+            .emoji{
+                font-size: 50px;
+            }
+            h4{
+                font-size: 40px;
+            }
+        }
+    }
+
+}
+
+/* tablet mode */
+@media screen and (min-width: 480px) and (max-width:1223px){
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header, header ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    header ul li {
+        font-size: 20px;
+    }
+
+    header h2 {
+        font-size: 30px;
+    }
+
+    #banner-section {
+        padding-left: 0;
+        h2 {
+            top: 0;
+            margin: 0;
+        }
+        p  {
+            bottom: 0%;
+            top: unset;
+            color: white;
+         }
+    }
+
+    #banner-section h2 {
+        top: 0;
+        margin: 0;
+    }
+
+    .about-title {
+        font-size: 30px;
+        max-width: 50%;
+        margin: auto;
+    }
+
+    main {
+        section{
+            img{
+                height: 50vh;
+                width: $media-tablet-width;
+            }
+        }
+    }
+
+    #Best-feature {
+        h2{
+        font-size: 40px;
+        }
+        .upper-row{
+            font-size: 20px;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: 1fr;
+            div{
+                border: 1px solid gray;
+            }
+            .emoji{
+                font-size: 50px;
+            }
+            h4{
+                font-size: 40px;
+            }
+        }
+    }
+}
+

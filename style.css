@@ -1,0 +1,275 @@
+body {
+  margin: 0;
+  background-color: rgb(243, 233, 233);
+  color: green;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+  padding-right: 20px;
+  font-size: 20px;
+}
+header h2 {
+  padding-left: 30px;
+  font-size: 40px;
+}
+
+header ul li a {
+  color: green;
+  text-decoration: none;
+}
+
+#banner-section {
+  background-image: url("https://cdn.britannica.com/57/144757-131-5BCA8A87.jpg");
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+#banner-section h2 {
+  position: absolute;
+  color: white;
+  font-size: 40px;
+  background-color: transparent;
+  top: 20%;
+  padding: 16px;
+}
+
+#banner-section h2 {
+  color: white;
+}
+
+#banner-section p {
+  position: absolute;
+  top: 40%;
+  max-width: 600px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main section {
+  padding: 20px;
+  border: 1px solid black;
+}
+main section img {
+  height: 300px;
+  width: 550px;
+}
+main section div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+main section div i {
+  color: green;
+}
+main section div h2 {
+  color: green;
+}
+
+#Best-feature {
+  text-align: center;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+  padding-top: 40px;
+}
+#Best-feature h2 {
+  font-size: 40px;
+}
+#Best-feature .upper-row {
+  font-size: 20px;
+}
+#Best-feature .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#Best-feature .row div {
+  border: 1px solid gray;
+}
+#Best-feature .row .emoji {
+  font-size: 50px;
+}
+#Best-feature .row h4 {
+  font-size: 40px;
+}
+
+.contact-us {
+  padding: 20px;
+}
+.contact-us form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-us form label {
+  font-size: 20px;
+}
+.contact-us form input {
+  padding: 10px;
+  background-color: rgb(213, 213, 213);
+  border: none;
+}
+.contact-us form button {
+  background-color: red;
+  width: 300px;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin: auto;
+  border: none;
+}
+
+.contact-us form button:hover {
+  background-color: green;
+  color: white;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 40px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  #banner-section {
+    display: flex;
+    justify-content: center;
+  }
+  header, header ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+  header ul li {
+    font-size: 20px;
+  }
+  header h2 {
+    font-size: 30px;
+  }
+  #banner-section p {
+    bottom: 0%;
+    top: unset;
+    color: purple;
+  }
+  #banner-section {
+    padding-left: 12px;
+  }
+  #banner-section h2 {
+    top: 0%;
+    margin: 0;
+  }
+  .about-title {
+    font-size: 20px;
+    max-width: 50%;
+    margin: auto;
+  }
+  main section img {
+    height: 50vh;
+    width: 30vh;
+  }
+  #Best-feature {
+    text-align: center;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    padding-top: 40px;
+  }
+  #Best-feature h2 {
+    font-size: 40px;
+  }
+  #Best-feature .upper-row {
+    font-size: 20px;
+  }
+  #Best-feature .row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #Best-feature .row div {
+    border: 1px solid gray;
+  }
+  #Best-feature .row .emoji {
+    font-size: 50px;
+  }
+  #Best-feature .row h4 {
+    font-size: 40px;
+  }
+}
+/* tablet mode */
+@media screen and (min-width: 480px) and (max-width: 1223px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  header, header ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+  header ul li {
+    font-size: 20px;
+  }
+  header h2 {
+    font-size: 30px;
+  }
+  #banner-section {
+    padding-left: 0;
+  }
+  #banner-section h2 {
+    top: 0;
+    margin: 0;
+  }
+  #banner-section p {
+    bottom: 0%;
+    top: unset;
+    color: white;
+  }
+  #banner-section h2 {
+    top: 0;
+    margin: 0;
+  }
+  .about-title {
+    font-size: 30px;
+    max-width: 50%;
+    margin: auto;
+  }
+  main section img {
+    height: 50vh;
+    width: 60vh;
+  }
+  #Best-feature h2 {
+    font-size: 40px;
+  }
+  #Best-feature .upper-row {
+    font-size: 20px;
+  }
+  #Best-feature .row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #Best-feature .row div {
+    border: 1px solid gray;
+  }
+  #Best-feature .row .emoji {
+    font-size: 50px;
+  }
+  #Best-feature .row h4 {
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=style.css.map */
